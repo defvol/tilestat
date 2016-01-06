@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/rodowi/tilestat/issues"
   },
-  "homepage": "https://github.com/rodowi/tilestat#readme"
+  "homepage": "https://github.com/rodowi/tilestat#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
