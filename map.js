@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(data, tile, writeData, done) {
   var count     = 0,
       osmLayer  = (data.osmdata.osm);
