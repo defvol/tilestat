@@ -3,7 +3,10 @@ var argv    = require('minimist')(process.argv.slice(2)),
     source  = argv._[0] || 'latest.planet.mbtiles',
     zoom    = argv.zoom ? parseInt(argv.zoom) : 12;
 
-console.dir(bbox);
-console.dir(source);
-console.dir(zoom);
+function usage() {
+  console.log('Usage: node index.js --<options> <tileset>');
+  console.log('node index.js --bbox="[-115, 32, -115, 32]" --zoom=9 tiles');
+}
+
+if(argv.help) usage();
 
