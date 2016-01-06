@@ -1,0 +1,25 @@
+{
+  "name": "tilestat",
+  "version": "0.0.1",
+  "description": "Get descriptive statistics for OSM QA Tiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodowi/tilestat.git"
+  },
+  "keywords": [
+    "TileReduce",
+    "Vector",
+    "Tiles",
+    "OpenStreetMap"
+  ],
+  "author": "Rodolfo Wilhelmy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodowi/tilestat/issues"
+  },
+  "homepage": "https://github.com/rodowi/tilestat#readme"
+}
