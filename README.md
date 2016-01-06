@@ -17,3 +17,18 @@ Processing 6 tiles.
 894
 ```
 
+## Testing
+```bash
+✗ npm test
+
+> tilestat@0.0.1 test /Users/ro/c/osm-qa/tilestat
+> tap test.js
+
+test.js ............................................... 2/2
+total ................................................. 2/2
+
+  2 passing (527.543ms)
+
+  ok
+```
+

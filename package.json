@@ -4,7 +4,7 @@
   "description": "Get descriptive statistics for OSM QA Tiles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "dependencies": {
     "minimist": "^1.2.0",
     "tile-reduce": "^3.0.2"
+  },
+  "devDependencies": {
+    "tap": "^5.0.0"
   }
 }
