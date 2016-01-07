@@ -9,9 +9,9 @@ test('it finds out whether a prop is an OSM feature', function (t) {
   t.end()
 })
 
-test('it extracts features out of properties', function(t) {
+test('it extracts tags out of properties', function(t) {
   var props = { _changeset: 12859902, highway: 'residential' },
-      got   = utils.getFeatures(props),
+      got   = utils.getTags(props),
       want  = ['highway'];
   t.similar(got, want, 'should get a feature called highway');
   t.end()
