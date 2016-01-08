@@ -1,10 +1,12 @@
 'use strict';
 
+var utils = require('./utils');
+
 var argv    = require('minimist')(process.argv.slice(2)),
     bbox    = JSON.parse(argv.bbox ? argv.bbox : '[-180, -85, 180, 85]'),
-    count   = 0,
     path    = require('path'),
     source  = argv._[0] || 'latest.planet.mbtiles',
+    tagMap  = {},
     tileReduce = require('tile-reduce'),
     zoom    = argv.zoom ? parseInt(argv.zoom) : 12;
 
@@ -28,9 +30,9 @@ tileReduce({
   ]
 })
 .on('reduce', function(result) {
-  count += result;
+  tagMap = utils.mergeTagMaps([tagMap, result]);
 })
 .on('end', function(error) {
-  console.log(count);
+  console.log(tagMap);
 });
 
