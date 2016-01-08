@@ -36,3 +36,14 @@ exports.mergeTagHashes = function(hashes) {
   return merged;
 }
 
+exports.sortTagHash = function(hash) {
+  // Sort hash keys by their value
+  var sortedKeys = _.sortBy(_.keys(hash), function(key) {
+    return hash[key];
+  });
+
+  return _.object(sortedKeys, _.map(sortedKeys, function(key) {
+    return hash[key];
+  }));
+}
+

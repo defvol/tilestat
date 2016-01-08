@@ -33,6 +33,6 @@ tileReduce({
   tagHash = utils.mergeTagHashes([tagHash, result]);
 })
 .on('end', function(error) {
-  console.log(tagHash);
+  console.log(utils.sortTagHash(tagHash));
 });
 

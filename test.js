@@ -44,3 +44,11 @@ test('it merges tag hashes', function(t) {
   t.end();
 });
 
+test('it sort a tag hash', function(t) {
+  var hash  = { 'highway': 1, 'amenity': 1, 'landuse': 3 },
+      got   = utils.sortTagHash(hash),
+      want  = { 'landuse': 3, 'highway': 1, 'amenity': 1 };
+  t.similar(got, want, 'should sort tag hashes');
+  t.end();
+});
+
