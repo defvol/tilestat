@@ -3,7 +3,7 @@
 var _ = require('underscore');
 
 exports.isFeature = function(propertyName) {
-  return propertyName.startsWith('_') == false;
+  return propertyName[0] != '_';
 }
 
 exports.getTags = function(properties) {

@@ -24,9 +24,15 @@
   "homepage": "https://github.com/rodowi/tilestat#readme",
   "dependencies": {
     "minimist": "^1.2.0",
-    "tile-reduce": "^3.0.2"
+    "tile-reduce": "^3.0.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "tap": "^5.0.0"
+  },
+  "engines": {
+    "node": "4.x",
+    "node": "0.12.x",
+    "node": "0.10.x"
   }
 }
