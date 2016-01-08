@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rodowi/tilestat.svg)](https://travis-ci.org/rodowi/tilestat)
+
 # tilestat
 Get descriptive statistics for OSM QA Tiles.
 
