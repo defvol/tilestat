@@ -6,7 +6,7 @@ var argv    = require('minimist')(process.argv.slice(2)),
     bbox    = JSON.parse(argv.bbox ? argv.bbox : '[-180, -85, 180, 85]'),
     path    = require('path'),
     source  = argv._[0] || 'latest.planet.mbtiles',
-    tagMap  = {},
+    tagHash  = {},
     tileReduce = require('tile-reduce'),
     zoom    = argv.zoom ? parseInt(argv.zoom) : 12;
 
@@ -30,9 +30,9 @@ tileReduce({
   ]
 })
 .on('reduce', function(result) {
-  tagMap = utils.mergeTagMaps([tagMap, result]);
+  tagHash = utils.mergeTagHashes([tagHash, result]);
 })
 .on('end', function(error) {
-  console.log(tagMap);
+  console.log(tagHash);
 });
 

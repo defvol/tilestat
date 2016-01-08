@@ -3,14 +3,14 @@
 var utils = require('./utils');
 
 module.exports = function(data, tile, writeData, done) {
-  var tagMap    = {},
+  var tagHash   = {},
       osmLayer  = data.osmdata.osm;
 
   osmLayer.features.forEach(function(element, index) {
     var tags = utils.getTags(element.properties);
-    tagMap = utils.updateTagMap(tagMap, tags);
+    tagHash = utils.updateTagHash(tagHash, tags);
   });
 
-  done(null, tagMap);
+  done(null, tagHash);
 };
 

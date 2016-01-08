@@ -10,23 +10,23 @@ exports.getTags = function(properties) {
   return _.keys(properties).filter(this.isFeature);
 }
 
-exports.buildTagMap = function(tags) {
+exports.buildTagHash = function(tags) {
   var ones = _.map(tags, function(t) { return 1 });
   return _.object(tags, ones);
 }
 
-exports.updateTagMap = function(map, tags) {
+exports.updateTagHash = function(hash, tags) {
   tags.forEach(function(element) {
-    map[element] = (map[element] || 0) + 1;
+    hash[element] = (hash[element] || 0) + 1;
   });
 
-  return map;
+  return hash;
 }
 
-exports.mergeTagMaps = function(maps) {
+exports.mergeTagHashes = function(hashes) {
   var merged = {};
-  maps.forEach(function(map) {
-    _.each(map, function(value, key) {
+  hashes.forEach(function(hash) {
+    _.each(hash, function(value, key) {
       merged[key] = (merged[key] || 0) + value;
     });
   });
