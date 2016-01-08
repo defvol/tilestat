@@ -24,8 +24,10 @@ exports.updateTagHash = function(hash, tags) {
 }
 
 exports.mergeTagHashes = function(hashes) {
-  var merged = {};
-  hashes.forEach(function(hash) {
+  // Setup result hash with first hash
+  var merged = hashes[0];
+  // and start looping after the second hash
+  hashes.slice(1).forEach(function(hash) {
     _.each(hash, function(value, key) {
       merged[key] = (merged[key] || 0) + value;
     });
