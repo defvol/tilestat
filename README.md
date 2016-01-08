@@ -14,7 +14,20 @@ npm install
 Starting up 2 workers... Job started.
 Processing 6 tiles.
 6 tiles processed in 0s.
-894
+{ 'tower:type': 1,
+...
+...
+...
+ operator: 806,
+  'addr:postcode': 848,
+  'addr:street': 873,
+  building: 894,
+  oneway: 1019,
+  amenity: 1171,
+  source: 2907,
+  name: 3038,
+  highway: 7796 }
+
 ```
 
 ## Testing
@@ -24,10 +37,10 @@ Processing 6 tiles.
 > tilestat@0.0.1 test /Users/ro/c/osm-qa/tilestat
 > tap test.js
 
-test.js ............................................... 2/2
-total ................................................. 2/2
+test.js ............................................... 7/7
+total ................................................. 7/7
 
-  2 passing (527.543ms)
+  7 passing (579.192ms)
 
   ok
 ```
