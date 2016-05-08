@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Get descriptive statistics of OSM QA tilesets",
   "main": "index.js",
+  "bin": {
+    "tilestat": "./index.js"
+  },
   "scripts": {
     "test": "tap test.js"
   },

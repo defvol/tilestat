@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 var utils = require('./utils');
@@ -35,4 +37,3 @@ tileReduce({
 .on('end', function(error) {
   console.log(utils.sortTagHash(tagHash));
 });
-
