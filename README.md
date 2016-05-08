@@ -5,13 +5,15 @@ Get descriptive statistics of OSM QA tilesets.
 
 Will run some basic calculations of OSM properties using TileReduce.
 
-## Installing
+## Installing globally
 ```bash
-npm install
+✗ npm install -g tilestat
+✗ tilestat ../../mexico.mbtiles
 ```
 
-## Running
+## Running locally
 ```bash
+✗ npm install
 ✗ node index.js --bbox="[-115.55, 32.55, -115.34, 32.67]" --zoom=12 ../data/mexico.mbtiles
 Starting up 2 workers... Job started.
 Processing 6 tiles.
